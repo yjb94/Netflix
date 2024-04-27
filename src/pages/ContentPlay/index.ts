@@ -1,1 +1,1 @@
-export { default as ContentPlayScreen } from './ui/ContentPlayScreen';
+export * from './ui'
