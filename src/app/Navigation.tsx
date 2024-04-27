@@ -1,9 +1,9 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import { ContentDetailScreen } from 'screens/ContentDetail';
-import { ContentPlayScreen } from 'screens/ContentPlay';
-import { HomeScreen } from 'screens/Home';
+import { ContentDetailScreen } from 'pages/ContentDetail';
+import { ContentPlayScreen } from 'pages/ContentPlay';
+import { HomeScreen } from 'pages/Home';
 
 export type RootStackParamList = {
   Home: undefined;
