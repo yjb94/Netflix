@@ -1,63 +1,70 @@
-import React from 'react';
-import { FlatList, View } from 'react-native';
+import React, { useCallback } from 'react';
+import { FlatList, ListRenderItem, View } from 'react-native';
 import { createStyleSheet, useStyles } from 'react-native-unistyles';
-import { ContentCard } from 'entities/content';
+import { Content, ContentCard, getTopTenContents } from 'entities/content';
+import Text from 'shared/ui/Text';
 
 export type TopTenContentsProps = {};
 
 const TopTenContents: React.FC<TopTenContentsProps> = () => {
   const { styles } = useStyles(stylesheet);
+  const data = getTopTenContents();
+
+  const renderItem: ListRenderItem<Content> = useCallback(
+    ({ item, index }) => {
+      return (
+        <>
+          <Text
+            color="greyGrey250"
+            style={styles.rankingText}
+          >
+            {index + 1}
+          </Text>
+          <ContentCard
+            {...item}
+            style={styles.contentCard}
+          />
+        </>
+      );
+    },
+    [styles]
+  );
 
   return (
     <View style={styles.container}>
+      <Text
+        typography="headline"
+        color="primaryWhite"
+        fontWeight="bold"
+        style={styles.sectionLabel}
+      >
+        오늘 대한민국의 TOP 10 시리즈
+      </Text>
       <FlatList
-        data={[
-          {
-            id: '1',
-            title: 'Stranger Things',
-            imageUrl:
-              'https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg',
-            isNewEpisode: true,
-            isNetflixOriginal: true,
-            releaseDate: '2016-07-15',
-          },
-          {
-            id: '2',
-            title: 'The Witcher',
-            imageUrl:
-              'https://image.tmdb.org/t/p/w500/zrPpUlehQaBf8YX2NrVrKK8IEpf.jpg',
-            isNewEpisode: false,
-            isNetflixOriginal: true,
-            releaseDate: '2019-12-20',
-          },
-          {
-            id: '3',
-            title: 'The Mandalorian',
-            imageUrl:
-              'https://image.tmdb.org/t/p/w500/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg',
-            isNewEpisode: false,
-            isNetflixOriginal: false,
-            releaseDate: '2019-11-12',
-          },
-        ]}
-        renderItem={({ item }) => (
-          <ContentCard
-            id={item.id}
-            title={item.title}
-            imageUrl={item.imageUrl}
-            isNewEpisode={item.isNewEpisode}
-            isNetflixOriginal={item.isNetflixOriginal}
-            releaseDate={item.releaseDate}
-          />
-        )}
+        data={data}
+        renderItem={renderItem}
         horizontal
+        showsHorizontalScrollIndicator={false}
       />
     </View>
   );
 };
 
 const stylesheet = createStyleSheet(() => ({
-  container: {},
+  container: {
+    paddingVertical: 8,
+  },
+  sectionLabel: {
+    marginBottom: 4,
+  },
+  contentCard: {
+    margin: 4,
+    marginLeft: 48,
+  },
+  rankingText: {
+    position: 'absolute',
+    fontSize: 154,
+  },
 }));
 
 export default TopTenContents;

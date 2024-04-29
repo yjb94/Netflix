@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import { createStyleSheet, useStyles } from 'react-native-unistyles';
 import { TopTenContents } from 'widgets/top-ten-contents';
 
@@ -10,14 +10,16 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
 
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
       <TopTenContents />
     </View>
   );
 };
 
-const stylesheet = createStyleSheet(() => ({
-  container: {},
+const stylesheet = createStyleSheet(theme => ({
+  container: {
+    backgroundColor: theme.colors.primaryBlack,
+    flex: 1,
+  },
 }));
 
 export default HomeScreen;
