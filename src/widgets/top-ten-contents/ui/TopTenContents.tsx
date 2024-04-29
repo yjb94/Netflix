@@ -31,9 +31,13 @@ const TopTenContents: React.FC<TopTenContentsProps> = () => {
             {index + 1}
           </Text>
           <ContentCard
-            {...item}
+            content={item}
             style={styles.contentCard}
-          />
+          >
+            <ContentCard.Background />
+            <ContentCard.NetflixOriginalIcon />
+            <ContentCard.LabelView />
+          </ContentCard>
         </Pressable>
       );
     },

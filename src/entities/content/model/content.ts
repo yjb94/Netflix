@@ -196,3 +196,13 @@ const contents: Content[] = [
 export const getTopTenContents = () => {
   return contents.sort((a, b) => b.viewCount - a.viewCount).slice(0, 10);
 };
+
+export const getTrendingContents = () => {
+  return contents.sort(() => 0.5 - Math.random()).slice(0, 10);
+};
+
+export const getIsTopTenContent = (content: Content) => {
+  return getTopTenContents().some(
+    topTenContent => topTenContent.id === content.id
+  );
+};
