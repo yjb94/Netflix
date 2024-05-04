@@ -6,4 +6,6 @@ export type Content = {
   isNewEpisode?: boolean;
   isNetflixOriginal?: boolean;
   releaseDate: string;
+  rating: '19+' | '15+' | '12+' | 'ALL';
+  quality: 'HD' | '4K';
 };

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Image } from 'react-native';
 import { createStyleSheet, useStyles } from 'react-native-unistyles';
 import { images } from 'shared/ui/assets';
-import { ContentCardContext } from './ContentCard';
+import { ContentCardContext } from '.';
 
 export type ContentCardNetflixOriginalIconProps = {};
 

@@ -1,22 +1,26 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
+import { createStyleSheet, useStyles } from 'react-native-unistyles';
 import { ContentDetailScreen } from 'pages/ContentDetail';
 import { ContentPlayScreen } from 'pages/ContentPlay';
 import { HomeScreen } from 'pages/Home';
-
-export type RootStackParamList = {
-  Home: undefined;
-  ContentDetail: { contentId: string };
-  ContentPlay: { contentId: string };
-};
+import { RootStackParamList } from 'shared/model/navigation';
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 const Navigation: React.FC = () => {
+  const { styles } = useStyles(stylesheet);
+
   return (
     <NavigationContainer>
-      <RootStack.Navigator initialRouteName="Home">
+      <RootStack.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerShown: false,
+          contentStyle: styles.contentStyle,
+        }}
+      >
         <RootStack.Screen
           name="Home"
           component={HomeScreen}
@@ -33,5 +37,11 @@ const Navigation: React.FC = () => {
     </NavigationContainer>
   );
 };
+const stylesheet = createStyleSheet(theme => ({
+  contentStyle: {
+    backgroundColor: theme.colors.primaryBlack,
+    flex: 1,
+  },
+}));
 
 export default Navigation;

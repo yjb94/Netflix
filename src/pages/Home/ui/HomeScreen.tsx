@@ -1,6 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
-import { createStyleSheet, useStyles } from 'react-native-unistyles';
+import {
+  UnistylesRuntime,
+  createStyleSheet,
+  useStyles,
+} from 'react-native-unistyles';
 import { TopTenContents } from 'widgets/top-ten-contents';
 import { TrendingContents } from 'widgets/trending-contents';
 
@@ -17,10 +21,9 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
   );
 };
 
-const stylesheet = createStyleSheet(theme => ({
+const stylesheet = createStyleSheet(() => ({
   container: {
-    backgroundColor: theme.colors.primaryBlack,
-    flex: 1,
+    paddingTop: UnistylesRuntime.insets.top,
   },
 }));
 

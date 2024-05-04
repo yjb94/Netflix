@@ -3,7 +3,7 @@ import { Image, View } from 'react-native';
 import { createStyleSheet, useStyles } from 'react-native-unistyles';
 import { getIsTopTenContent } from 'entities/content';
 import { images } from 'shared/ui/assets';
-import { ContentCardContext } from './ContentCard';
+import { ContentCardContext } from '.';
 
 export type ContentCardTopTenBadgeProps = {};
 

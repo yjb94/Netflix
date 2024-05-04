@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { createStyleSheet, useStyles } from 'react-native-unistyles';
 import { getIsRecentContent } from 'entities/content';
 import Label from 'shared/ui/Label';
-import { ContentCardContext } from './ContentCard';
+import { ContentCardContext } from '.';
 
 export type ContentCardLabelViewProps = {};
 

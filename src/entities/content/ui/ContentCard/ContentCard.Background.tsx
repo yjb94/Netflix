@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Image, StyleSheet } from 'react-native';
 import { createStyleSheet, useStyles } from 'react-native-unistyles';
-import { ContentCardContext } from './ContentCard';
+import { ContentCardContext } from '.';
 
 export type ContentCardBackgroundProps = {};
 
