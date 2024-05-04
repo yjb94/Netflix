@@ -1,3 +1,3 @@
-import SaveContent from './SaveContentButton';
+import SaveContentButton from './SaveContentButton';
 
-export { SaveContent };
+export { SaveContentButton };

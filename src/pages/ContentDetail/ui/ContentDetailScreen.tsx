@@ -10,7 +10,7 @@ import {
   useStyles,
 } from 'react-native-unistyles';
 import { PlayContentButton } from 'features/play-content';
-import SaveContentButton from 'features/save-content/ui/SaveContentButton';
+import { SaveContentButton } from 'features/save-content';
 import { ContentInformation, getContentById } from 'entities/content';
 import { RootStackParamList } from 'shared/model/navigation';
 import Icon from 'shared/ui/Icon';
