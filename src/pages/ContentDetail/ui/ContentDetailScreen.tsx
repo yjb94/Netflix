@@ -9,6 +9,7 @@ import {
   createStyleSheet,
   useStyles,
 } from 'react-native-unistyles';
+import { RecommendedContents } from 'widgets/recommended-contents';
 import { PlayContentButton } from 'features/play-content';
 import { RateContentIconButton } from 'features/rate-content';
 import {
@@ -46,8 +47,53 @@ const ContentDetailScreen: React.FC<ContentDetailScreenProps> = ({
 
   const { styles } = useStyles(stylesheet);
 
+  const renderListHeader = () => {
+    return (
+      <View style={styles.header}>
+        <Image
+          source={{ uri: content.imageUrl }}
+          style={styles.preview}
+        />
+        <ContentInformation
+          style={styles.centerContainer}
+          title={content.title}
+          releaseDate={content.releaseDate}
+          rating={content.rating}
+          quality={content.quality}
+        />
+        <PlayContentButton
+          contentId={contentId}
+          style={styles.button}
+        />
+        <SaveContentButton
+          contentId={contentId}
+          style={styles.button}
+        />
+        <ContentSummary
+          style={styles.summary}
+          summary={content.summary}
+          casts={content.casts}
+        />
+        <View style={styles.engageContainer}>
+          <SaveContentIconButton
+            contentId={content.id}
+            style={styles.engageIconButton}
+          />
+          <RateContentIconButton
+            contentId={content.id}
+            style={styles.engageIconButton}
+          />
+          <ShareContentIconButton
+            contentId={content.id}
+            style={styles.engageIconButton}
+          />
+        </View>
+      </View>
+    );
+  };
+
   return (
-    <View style={styles.container}>
+    <>
       <Pressable
         style={styles.closeButton}
         onPress={navigation.goBack}
@@ -57,45 +103,11 @@ const ContentDetailScreen: React.FC<ContentDetailScreenProps> = ({
           size={16}
         />
       </Pressable>
-      <Image
-        source={{ uri: content.imageUrl }}
-        style={styles.preview}
+      <RecommendedContents
+        contentContainerStyle={styles.container}
+        ListHeaderComponent={renderListHeader}
       />
-      <ContentInformation
-        style={styles.centerContainer}
-        title={content.title}
-        releaseDate={content.releaseDate}
-        rating={content.rating}
-        quality={content.quality}
-      />
-      <PlayContentButton
-        contentId={contentId}
-        style={styles.button}
-      />
-      <SaveContentButton
-        contentId={contentId}
-        style={styles.button}
-      />
-      <ContentSummary
-        style={styles.summary}
-        summary={content.summary}
-        casts={content.casts}
-      />
-      <View style={styles.engageContainer}>
-        <SaveContentIconButton
-          contentId={content.id}
-          style={styles.engageIconButton}
-        />
-        <RateContentIconButton
-          contentId={content.id}
-          style={styles.engageIconButton}
-        />
-        <ShareContentIconButton
-          contentId={content.id}
-          style={styles.engageIconButton}
-        />
-      </View>
-    </View>
+    </>
   );
 };
 
@@ -111,6 +123,9 @@ const stylesheet = createStyleSheet(theme => ({
     padding: 6,
     borderRadius: 24,
     zIndex: 1,
+  },
+  header: {
+    marginBottom: 16,
   },
   preview: {
     width: '100%',

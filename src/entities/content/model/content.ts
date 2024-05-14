@@ -315,3 +315,7 @@ export const getIsTopTenContent = (content: Content) => {
     topTenContent => topTenContent.id === content.id
   );
 };
+
+export const getRecommendedContents = () => {
+  return contents.sort(() => 0.5 - Math.random()).slice(0, 12);
+};
