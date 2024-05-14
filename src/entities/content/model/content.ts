@@ -5,6 +5,8 @@ const contents: Content[] = [
     id: '1',
     title: 'Stranger Things',
     imageUrl: 'https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 100,
     isNewEpisode: true,
     isNetflixOriginal: true,
@@ -19,6 +21,8 @@ const contents: Content[] = [
     id: '2',
     title: 'The Witcher',
     imageUrl: 'https://image.tmdb.org/t/p/w500/zrPpUlehQaBf8YX2NrVrKK8IEpf.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 200,
     isNewEpisode: false,
     isNetflixOriginal: true,
@@ -33,6 +37,8 @@ const contents: Content[] = [
     id: '3',
     title: 'The Mandalorian',
     imageUrl: 'https://image.tmdb.org/t/p/w500/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 300,
     isNewEpisode: false,
     isNetflixOriginal: false,
@@ -47,6 +53,8 @@ const contents: Content[] = [
     id: '4',
     title: "The Queen's Gambit",
     imageUrl: 'https://image.tmdb.org/t/p/w500/zU0htwkhNvBQdVSIKB9s6hgVeFK.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 400,
     isNewEpisode: false,
     isNetflixOriginal: true,
@@ -61,6 +69,8 @@ const contents: Content[] = [
     id: '5',
     title: 'The Crown',
     imageUrl: 'https://image.tmdb.org/t/p/w500/8kOWDBK6XlPUzckuHDo3wwVRFwt.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 500,
     isNewEpisode: false,
     isNetflixOriginal: true,
@@ -75,6 +85,8 @@ const contents: Content[] = [
     id: '6',
     title: 'The Umbrella Academy',
     imageUrl: 'https://image.tmdb.org/t/p/w500/scZlQQYnDVlnpxFTxaIv2g0BWnL.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 270,
     isNewEpisode: true,
     isNetflixOriginal: true,
@@ -89,6 +101,8 @@ const contents: Content[] = [
     id: '7',
     title: 'Money Heist',
     imageUrl: 'https://image.tmdb.org/t/p/w500/MoEKaPFHABtA1xKoOteirGaHl1.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 320,
     isNewEpisode: false,
     isNetflixOriginal: true,
@@ -103,6 +117,8 @@ const contents: Content[] = [
     id: '8',
     title: 'The Office',
     imageUrl: 'https://image.tmdb.org/t/p/w500/7DJKHzAi83BmQrWLrYYOqcoKfhR.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 400,
     isNewEpisode: false,
     isNetflixOriginal: false,
@@ -117,6 +133,8 @@ const contents: Content[] = [
     id: '9',
     title: 'Breaking Bad',
     imageUrl: 'https://image.tmdb.org/t/p/w500/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 450,
     isNewEpisode: false,
     isNetflixOriginal: false,
@@ -131,6 +149,8 @@ const contents: Content[] = [
     id: '10',
     title: 'Friends',
     imageUrl: 'https://image.tmdb.org/t/p/w500/f496cm9enuEsZkSPzCwnTESEK5s.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 500,
     isNewEpisode: false,
     isNetflixOriginal: false,
@@ -145,6 +165,8 @@ const contents: Content[] = [
     id: '11',
     title: 'The Simpsons',
     imageUrl: 'https://image.tmdb.org/t/p/w500/3u9z0eKY4Zmc9DQATfKcSuMTpzi.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 600,
     isNewEpisode: false,
     isNetflixOriginal: false,
@@ -159,6 +181,8 @@ const contents: Content[] = [
     id: '12',
     title: 'The Good Place',
     imageUrl: 'https://image.tmdb.org/t/p/w500/qIhsuhoIYR5yTnDta0IL4senbeN.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 700,
     isNewEpisode: false,
     isNetflixOriginal: false,
@@ -173,6 +197,8 @@ const contents: Content[] = [
     id: '13',
     title: 'The Big Bang Theory',
     imageUrl: 'https://image.tmdb.org/t/p/w500/ooBGRQBdbGzBxAVfExiO8r7kloA.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 800,
     isNewEpisode: false,
     isNetflixOriginal: false,
@@ -187,6 +213,8 @@ const contents: Content[] = [
     id: '14',
     title: 'Modern Family',
     imageUrl: 'https://image.tmdb.org/t/p/w500/klL4yhwiU8aF4AuF5dCfJA9sRnS.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 900,
     isNewEpisode: false,
     isNetflixOriginal: false,
@@ -201,6 +229,8 @@ const contents: Content[] = [
     id: '15',
     title: 'Brooklyn Nine-Nine',
     imageUrl: 'https://image.tmdb.org/t/p/w500/hgRMSOt7a1b8qyQR68vUixJPang.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 1000,
     isNewEpisode: false,
     isNetflixOriginal: false,
@@ -215,6 +245,8 @@ const contents: Content[] = [
     id: '16',
     title: 'The Blacklist',
     imageUrl: 'https://image.tmdb.org/t/p/w500/bgbQCW4fE9b6wSOSC6Fb4FfVzsW.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 300,
     isNewEpisode: false,
     isNetflixOriginal: false,
@@ -229,6 +261,8 @@ const contents: Content[] = [
     id: '17',
     title: 'The Walking Dead',
     imageUrl: 'https://image.tmdb.org/t/p/w500/reKs8y4mPwPkZG99ZpbKRhBPKsX.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 400,
     isNewEpisode: false,
     isNetflixOriginal: false,
@@ -243,6 +277,8 @@ const contents: Content[] = [
     id: '18',
     title: 'The Flash',
     imageUrl: 'https://image.tmdb.org/t/p/w500/wHa6KOJAoNTFLFtp7wguUJKSnju.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 500,
     isNewEpisode: false,
     isNetflixOriginal: false,
@@ -257,6 +293,8 @@ const contents: Content[] = [
     id: '19',
     title: 'Squid Game',
     imageUrl: 'https://image.tmdb.org/t/p/w500/yACIAqAkSLkX4coHafpyLWAtQjw.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 2000,
     isNewEpisode: true,
     isNetflixOriginal: true,
@@ -271,6 +309,8 @@ const contents: Content[] = [
     id: '20',
     title: 'Parasite',
     imageUrl: 'https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 1500,
     isNewEpisode: true,
     isNetflixOriginal: false,
@@ -286,6 +326,8 @@ const contents: Content[] = [
     title: '개쩌는 신작',
     imageUrl:
       'https://s.studiobinder.com/wp-content/uploads/2017/12/Movie-Poster-Template-Dark-with-Image.jpg',
+    videoUrl:
+      'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_30mb.mp4',
     viewCount: 10000,
     isNewEpisode: true,
     isNetflixOriginal: true,
