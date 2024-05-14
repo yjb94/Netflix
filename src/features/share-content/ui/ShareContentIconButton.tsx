@@ -1,15 +1,14 @@
 import React from 'react';
-import { StyleProp, ViewStyle } from 'react-native';
+import { Alert, StyleProp, ViewStyle } from 'react-native';
 import { getContentById } from 'entities/content';
-import Button from 'shared/ui/Button';
-import { saveContent } from '../lib';
+import IconButton from 'shared/ui/IconButton';
 
-export type SaveContentButtonProps = {
+export type ShareContentIconButtonProps = {
   contentId: string;
   style?: StyleProp<ViewStyle>;
 };
 
-const SaveContentButton: React.FC<SaveContentButtonProps> = ({
+const ShareContentIconButton: React.FC<ShareContentIconButtonProps> = ({
   contentId,
   style,
 }) => {
@@ -20,18 +19,17 @@ const SaveContentButton: React.FC<SaveContentButtonProps> = ({
   }
 
   const handleButtonPress = () => {
-    saveContent(content);
+    Alert.alert(`${content.title}을 공유했습니다.`);
   };
 
   return (
-    <Button
-      color="darkGrey"
-      iconProps={{ name: 'plus', size: 16 }}
-      text={`${content.title} 저장`}
+    <IconButton
       style={style}
+      iconProps={{ name: 'flag', size: 24 }}
+      label="공유"
       onPress={handleButtonPress}
     />
   );
 };
 
-export default SaveContentButton;
+export default ShareContentIconButton;

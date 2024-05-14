@@ -10,7 +10,12 @@ import {
   useStyles,
 } from 'react-native-unistyles';
 import { PlayContentButton } from 'features/play-content';
-import { SaveContentButton } from 'features/save-content';
+import { RateContentIconButton } from 'features/rate-content';
+import {
+  SaveContentButton,
+  SaveContentIconButton,
+} from 'features/save-content';
+import { ShareContentIconButton } from 'features/share-content';
 import {
   ContentInformation,
   ContentSummary,
@@ -76,6 +81,20 @@ const ContentDetailScreen: React.FC<ContentDetailScreenProps> = ({
         summary={content.summary}
         casts={content.casts}
       />
+      <View style={styles.engageContainer}>
+        <SaveContentIconButton
+          contentId={content.id}
+          style={styles.engageIconButton}
+        />
+        <RateContentIconButton
+          contentId={content.id}
+          style={styles.engageIconButton}
+        />
+        <ShareContentIconButton
+          contentId={content.id}
+          style={styles.engageIconButton}
+        />
+      </View>
     </View>
   );
 };
@@ -105,6 +124,15 @@ const stylesheet = createStyleSheet(theme => ({
   },
   summary: {
     marginTop: 16,
+  },
+  engageContainer: {
+    marginTop: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  engageIconButton: {
+    minWidth: 48,
+    marginRight: 8,
   },
 }));
 

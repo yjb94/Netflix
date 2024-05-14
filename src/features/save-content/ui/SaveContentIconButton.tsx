@@ -1,15 +1,15 @@
 import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
 import { getContentById } from 'entities/content';
-import Button from 'shared/ui/Button';
+import IconButton from 'shared/ui/IconButton';
 import { saveContent } from '../lib';
 
-export type SaveContentButtonProps = {
+export type SaveContentIconButtonProps = {
   contentId: string;
   style?: StyleProp<ViewStyle>;
 };
 
-const SaveContentButton: React.FC<SaveContentButtonProps> = ({
+const SaveContentIconButton: React.FC<SaveContentIconButtonProps> = ({
   contentId,
   style,
 }) => {
@@ -24,14 +24,13 @@ const SaveContentButton: React.FC<SaveContentButtonProps> = ({
   };
 
   return (
-    <Button
-      color="darkGrey"
-      iconProps={{ name: 'plus', size: 16 }}
-      text={`${content.title} 저장`}
+    <IconButton
       style={style}
+      iconProps={{ name: 'plus', size: 24 }}
+      label="내가 찜한 리스트"
       onPress={handleButtonPress}
     />
   );
 };
 
-export default SaveContentButton;
+export default SaveContentIconButton;
