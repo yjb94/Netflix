@@ -3,8 +3,8 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React, { useCallback } from 'react';
 import { FlatList, ListRenderItem, Pressable, View } from 'react-native';
 import { createStyleSheet, useStyles } from 'react-native-unistyles';
-import { RootStackParamList } from 'app/Navigation';
 import { Content, ContentCard, getTopTenContents } from 'entities/content';
+import { RootStackParamList } from 'shared/model/navigation';
 import Text from 'shared/ui/Text';
 
 export type TopTenContentsProps = {};

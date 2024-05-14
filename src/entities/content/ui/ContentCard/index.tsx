@@ -3,7 +3,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React, { PropsWithChildren, createContext } from 'react';
 import { Pressable, StyleProp, ViewStyle } from 'react-native';
 import { createStyleSheet, useStyles } from 'react-native-unistyles';
-import { RootStackParamList } from 'app/Navigation';
+import { RootStackParamList } from 'shared/model/navigation';
 import { Content } from '../../model';
 import ContentCardBackground from './ContentCard.Background';
 import ContentCardLabelView from './ContentCard.LabelView';
