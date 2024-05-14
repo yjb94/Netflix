@@ -11,7 +11,11 @@ import {
 } from 'react-native-unistyles';
 import { PlayContentButton } from 'features/play-content';
 import { SaveContentButton } from 'features/save-content';
-import { ContentInformation, getContentById } from 'entities/content';
+import {
+  ContentInformation,
+  ContentSummary,
+  getContentById,
+} from 'entities/content';
 import { RootStackParamList } from 'shared/model/navigation';
 import Icon from 'shared/ui/Icon';
 
@@ -67,6 +71,11 @@ const ContentDetailScreen: React.FC<ContentDetailScreenProps> = ({
         contentId={contentId}
         style={styles.button}
       />
+      <ContentSummary
+        style={styles.summary}
+        summary={content.summary}
+        casts={content.casts}
+      />
     </View>
   );
 };
@@ -93,6 +102,9 @@ const stylesheet = createStyleSheet(theme => ({
   },
   button: {
     marginTop: 8,
+  },
+  summary: {
+    marginTop: 16,
   },
 }));
 

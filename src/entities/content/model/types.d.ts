@@ -8,4 +8,6 @@ export type Content = {
   releaseDate: string;
   rating: '19+' | '15+' | '12+' | 'ALL';
   quality: 'HD' | '4K';
+  summary: string;
+  casts: string[];
 };
