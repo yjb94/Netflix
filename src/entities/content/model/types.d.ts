@@ -2,6 +2,7 @@ export type Content = {
   id: string;
   title: string;
   imageUrl: string;
+  videoUrl: string;
   viewCount: number;
   isNewEpisode?: boolean;
   isNetflixOriginal?: boolean;

@@ -6227,6 +6227,11 @@ react-native-unistyles@^2.7.1:
   resolved "https://registry.yarnpkg.com/react-native-unistyles/-/react-native-unistyles-2.7.1.tgz#db69483c8d4cfb2267632c11bb2730ef5d447816"
   integrity sha512-sYaDBsoX+2dfgak4YPWXvy1Hr9QFpGumBavn5wYF5dT3/Yl8F1VFol8SrvxRFfcqjpa+ENuKR6ylvmQXtQAbGQ==
 
+react-native-video@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-video/-/react-native-video-6.0.0.tgz#0bf65e36ef64f3f518e208ccf7a6b2455e75497b"
+  integrity sha512-G1b2L2DDbRWgyBRoQLonUEiOcsTSCfNPxGbzd6lYdhOUIyoAeBXarfFSg+89xMF6R36j7f+147FVxkjz6r60jQ==
+
 react-native@0.74.0:
   version "0.74.0"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.74.0.tgz#9f0901139424152216e1ae1b32773787a0158d41"
